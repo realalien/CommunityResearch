@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KoW-9t-MGh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CommunityResearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,97 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNl-xv-Sn0" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zNl-xv-Sn0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Af4-mW-SLw"/>
+                            <constraint firstAttribute="bottom" secondItem="zNl-xv-Sn0" secondAttribute="bottom" id="MAK-gI-neb"/>
+                            <constraint firstItem="zNl-xv-Sn0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xA6-CS-5VD"/>
+                            <constraint firstAttribute="trailing" secondItem="zNl-xv-Sn0" secondAttribute="trailing" id="y6i-V3-AOJ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sJJ-Ka-CQw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Dx2-aG-IU4">
+                            <connections>
+                                <segue destination="gy3-FN-N68" kind="show" id="bdv-UK-Yq8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="zNl-xv-Sn0" id="fDq-ky-5Z9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="974" y="585"/>
+        </scene>
+        <!--Poi Demo View Controller-->
+        <scene sceneID="Prz-ul-RzS">
+            <objects>
+                <viewController id="gy3-FN-N68" customClass="PoiDemoViewController" customModule="CommunityResearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CbS-Ep-iv2"/>
+                        <viewControllerLayoutGuide type="bottom" id="G7p-j0-ZVR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Xf-pi-UdL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hpm-4a-GDA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gy3-FN-N68" id="qGo-wx-Zdc"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hpm-4a-GDA" secondAttribute="trailing" id="awZ-9t-db7"/>
+                            <constraint firstItem="Hpm-4a-GDA" firstAttribute="leading" secondItem="3Xf-pi-UdL" secondAttribute="leading" id="hsT-Zp-8j6"/>
+                            <constraint firstItem="Hpm-4a-GDA" firstAttribute="top" secondItem="CbS-Ep-iv2" secondAttribute="bottom" id="ney-Gz-p7G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Hpm-4a-GDA" id="NHI-w8-Wz7"/>
+                        <outlet property="searchDisplayController" destination="aLP-uH-fCQ" id="uEG-pT-diX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F05-HF-gwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="aLP-uH-fCQ">
+                    <connections>
+                        <outlet property="delegate" destination="gy3-FN-N68" id="hoD-Dq-NyA"/>
+                        <outlet property="searchBar" destination="Hpm-4a-GDA" id="CLW-MN-FVo"/>
+                        <outlet property="searchContentsController" destination="gy3-FN-N68" id="2QF-Gi-fva"/>
+                        <outlet property="searchResultsDataSource" destination="gy3-FN-N68" id="iXa-zd-gbC"/>
+                        <outlet property="searchResultsDelegate" destination="gy3-FN-N68" id="r2D-5J-Jtn"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1651" y="585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ATO-5n-fyu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KoW-9t-MGh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZ1-uf-Lg2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="crv-NB-JrT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueF-bl-MOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-356"/>
         </scene>
     </scenes>
 </document>

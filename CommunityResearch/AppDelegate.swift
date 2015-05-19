@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let baiduMapManager = BMKMapManager()
+        baiduMapManager.start("DDETG0I7VkLQit0GBQsU1cQC", generalDelegate: nil)
+        
         return true
     }
 

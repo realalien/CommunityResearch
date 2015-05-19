@@ -14,6 +14,16 @@
 		DEADBFDF1B0ADF0800E5E23F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEADBFDE1B0ADF0800E5E23F /* Images.xcassets */; };
 		DEADBFE21B0ADF0800E5E23F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEADBFE01B0ADF0800E5E23F /* LaunchScreen.xib */; };
 		DEADBFEE1B0ADF0800E5E23F /* CommunityResearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEADBFED1B0ADF0800E5E23F /* CommunityResearchTests.swift */; };
+		DEADC08E1B0AE24500E5E23F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC08D1B0AE24500E5E23F /* CoreLocation.framework */; };
+		DEADC0901B0AE24B00E5E23F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC08F1B0AE24B00E5E23F /* QuartzCore.framework */; };
+		DEADC0921B0AE25200E5E23F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0911B0AE25200E5E23F /* OpenGLES.framework */; };
+		DEADC0941B0AE25800E5E23F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0931B0AE25800E5E23F /* SystemConfiguration.framework */; };
+		DEADC0961B0AE26200E5E23F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0951B0AE26200E5E23F /* CoreGraphics.framework */; };
+		DEADC0981B0AE26800E5E23F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0971B0AE26800E5E23F /* Security.framework */; };
+		DEADC09C1B0AE32000E5E23F /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DEADC09B1B0AE32000E5E23F /* mapapi.bundle */; };
+		DEADC09F1B0AE5BF00E5E23F /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC09E1B0AE5BF00E5E23F /* BaiduMapAPI.framework */; };
+		DEADC0A11B0AE5ED00E5E23F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0A01B0AE5ED00E5E23F /* libstdc++.dylib */; };
+		DEADC0A51B0B124600E5E23F /* PoiDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEADC0A41B0B124600E5E23F /* PoiDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,17 @@
 		DEADBFE71B0ADF0800E5E23F /* CommunityResearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommunityResearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEADBFEC1B0ADF0800E5E23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEADBFED1B0ADF0800E5E23F /* CommunityResearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResearchTests.swift; sourceTree = "<group>"; };
+		DEADC0881B0AE11100E5E23F /* CommunityResearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommunityResearch-Bridging-Header.h"; sourceTree = "<group>"; };
+		DEADC08D1B0AE24500E5E23F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DEADC08F1B0AE24B00E5E23F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DEADC0911B0AE25200E5E23F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DEADC0931B0AE25800E5E23F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DEADC0951B0AE26200E5E23F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DEADC0971B0AE26800E5E23F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DEADC09B1B0AE32000E5E23F /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = ../Frameworks/BaiduMapAPI.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		DEADC09E1B0AE5BF00E5E23F /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
+		DEADC0A01B0AE5ED00E5E23F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		DEADC0A41B0B124600E5E23F /* PoiDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +66,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEADC0A11B0AE5ED00E5E23F /* libstdc++.dylib in Frameworks */,
+				DEADC0981B0AE26800E5E23F /* Security.framework in Frameworks */,
+				DEADC0961B0AE26200E5E23F /* CoreGraphics.framework in Frameworks */,
+				DEADC0941B0AE25800E5E23F /* SystemConfiguration.framework in Frameworks */,
+				DEADC09F1B0AE5BF00E5E23F /* BaiduMapAPI.framework in Frameworks */,
+				DEADC0921B0AE25200E5E23F /* OpenGLES.framework in Frameworks */,
+				DEADC0901B0AE24B00E5E23F /* QuartzCore.framework in Frameworks */,
+				DEADC08E1B0AE24500E5E23F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +93,8 @@
 				DEADBFD11B0ADF0800E5E23F /* CommunityResearch */,
 				DEADBFEA1B0ADF0800E5E23F /* CommunityResearchTests */,
 				DEADBFD01B0ADF0800E5E23F /* Products */,
+				DEADC09D1B0AE33B00E5E23F /* Resources */,
+				DEADC0801B0AE08100E5E23F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +116,11 @@
 				DEADBFDE1B0ADF0800E5E23F /* Images.xcassets */,
 				DEADBFE01B0ADF0800E5E23F /* LaunchScreen.xib */,
 				DEADBFD61B0ADF0800E5E23F /* CommunityResearch.xcdatamodeld */,
+				DEADC0871B0AE0EB00E5E23F /* ViewControllers */,
+				DEADC0A21B0B04EB00E5E23F /* Models */,
+				DEADC0A31B0B04EB00E5E23F /* Views */,
 				DEADBFD21B0ADF0800E5E23F /* Supporting Files */,
+				DEADC0881B0AE11100E5E23F /* CommunityResearch-Bridging-Header.h */,
 			);
 			path = CommunityResearch;
 			sourceTree = "<group>";
@@ -113,6 +148,53 @@
 				DEADBFEC1B0ADF0800E5E23F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEADC0801B0AE08100E5E23F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEADC0A01B0AE5ED00E5E23F /* libstdc++.dylib */,
+				DEADC09E1B0AE5BF00E5E23F /* BaiduMapAPI.framework */,
+				DEADC0971B0AE26800E5E23F /* Security.framework */,
+				DEADC0951B0AE26200E5E23F /* CoreGraphics.framework */,
+				DEADC0931B0AE25800E5E23F /* SystemConfiguration.framework */,
+				DEADC0911B0AE25200E5E23F /* OpenGLES.framework */,
+				DEADC08F1B0AE24B00E5E23F /* QuartzCore.framework */,
+				DEADC08D1B0AE24500E5E23F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			path = CommunityResearch.xcodeproj/../CommunityResearch/Frameworks;
+			sourceTree = "<group>";
+		};
+		DEADC0871B0AE0EB00E5E23F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEADC0A41B0B124600E5E23F /* PoiDemoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DEADC09D1B0AE33B00E5E23F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEADC09B1B0AE32000E5E23F /* mapapi.bundle */,
+			);
+			name = Resources;
+			path = CommunityResearch/Resources;
+			sourceTree = "<group>";
+		};
+		DEADC0A21B0B04EB00E5E23F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DEADC0A31B0B04EB00E5E23F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEADBFDD1B0ADF0800E5E23F /* Main.storyboard in Resources */,
+				DEADC09C1B0AE32000E5E23F /* mapapi.bundle in Resources */,
 				DEADBFE21B0ADF0800E5E23F /* LaunchScreen.xib in Resources */,
 				DEADBFDF1B0ADF0800E5E23F /* Images.xcassets in Resources */,
 			);
@@ -217,6 +300,7 @@
 			files = (
 				DEADBFDA1B0ADF0800E5E23F /* ViewController.swift in Sources */,
 				DEADBFD81B0ADF0800E5E23F /* CommunityResearch.xcdatamodeld in Sources */,
+				DEADC0A51B0B124600E5E23F /* PoiDemoViewController.swift in Sources */,
 				DEADBFD51B0ADF0800E5E23F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,9 +428,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks",
+				);
 				INFOPLIST_FILE = CommunityResearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks/BaiduMap_IOSSDK_v2.7.0_Lib/Release-iphoneos/BaiduMapAPI.framework",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks/BaiduMap_IOSSDK_v2.7.0_Lib/Release-iphonesimulator/BaiduMapAPI.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CommunityResearch/CommunityResearch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -354,9 +452,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks",
+				);
 				INFOPLIST_FILE = CommunityResearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks/BaiduMap_IOSSDK_v2.7.0_Lib/Release-iphoneos/BaiduMapAPI.framework",
+					"$(PROJECT_DIR)/CommunityResearch/Frameworks/BaiduMap_IOSSDK_v2.7.0_Lib/Release-iphonesimulator/BaiduMapAPI.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CommunityResearch/CommunityResearch-Bridging-Header.h";
 			};
 			name = Release;
 		};
