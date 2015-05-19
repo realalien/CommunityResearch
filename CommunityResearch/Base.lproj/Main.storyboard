@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="sJJ-Ka-CQw">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Dx2-aG-IU4">
                             <connections>
-                                <segue destination="gy3-FN-N68" kind="show" id="bdv-UK-Yq8"/>
+                                <segue destination="gy3-FN-N68" kind="show" identifier="poiSearch" id="bdv-UK-Yq8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

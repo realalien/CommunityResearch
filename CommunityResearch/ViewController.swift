@@ -35,6 +35,16 @@ class ViewController: UIViewController, BMKMapViewDelegate, BMKLocationServiceDe
 
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "poiSearch" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = segue.destinationViewController.topViewController as! PoiDemoViewController
+            controller.centerlocation = mapView.centerCoordinate
+            //controller.delegate = self
+        }
+    }
+    
+    
     // BMKMapViewDelegate
     
 

@@ -17,7 +17,7 @@ class PoiDemoViewController: UIViewController, UITableViewDelegate, UITableViewD
  
     var poiSearcher = BMKPoiSearch()
 
-    var location: CLLocationCoordinate2D!
+    var centerlocation: CLLocationCoordinate2D!
     
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class PoiDemoViewController: UIViewController, UITableViewDelegate, UITableViewD
         var option = BMKNearbySearchOption()
         option.pageIndex = 0
         option.pageCapacity = 50
-        option.location = location
+        option.location = centerlocation
         option.keyword = searchText
         
         poiSearcher.poiSearchNearBy(option);
