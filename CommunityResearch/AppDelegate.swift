@@ -10,16 +10,19 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, BMKGeneralDelegate {
 
     var window: UIWindow?
-
+    var baiduMapManager: BMKMapManager!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let baiduMapManager = BMKMapManager()
-        baiduMapManager.start("DDETG0I7VkLQit0GBQsU1cQC", generalDelegate: nil)
+        baiduMapManager = BMKMapManager()
+        var ret:Bool = baiduMapManager.start("DDETG0I7VkLQit0GBQsU1cQC",  generalDelegate:self)
+        if (!ret) {
+            NSLog("manager start failed!");
+        }
         
         return true
     }
@@ -110,6 +113,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+    // general delegate
+    func onGetPermissionState(iError: Int32) {
+        if (0 == iError) {
+            NSLog("联网成功");
+        }
+        else{
+            NSLog("onGetNetworkState \(iError)");
+        }
+    }
 
+
+    func onGetNetworkState(iError: Int32) {
+        if (0 == iError) {
+            NSLog("授权成功");
+        }
+        else {
+            NSLog("onGetPermissionState \(iError)")
+        }
+    }
 }
 

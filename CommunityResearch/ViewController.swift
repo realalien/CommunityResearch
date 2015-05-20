@@ -37,8 +37,7 @@ class ViewController: UIViewController, BMKMapViewDelegate, BMKLocationServiceDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "poiSearch" {
-            let navigationController = segue.destinationViewController as! UINavigationController
-            let controller = segue.destinationViewController.topViewController as! PoiDemoViewController
+            let controller = segue.destinationViewController as! PoiDemoViewController
             controller.centerlocation = mapView.centerCoordinate
             //controller.delegate = self
         }
@@ -61,15 +60,9 @@ class ViewController: UIViewController, BMKMapViewDelegate, BMKLocationServiceDe
     }
     
     func didFailToLocateUserWithError(error: NSError!) {
-        println("[Error] didFailToLocateUserWithError occured.")
+        println("[Error] didFailToLocateUserWithError occured. \(error.localizedDescription)")
     }
-    
-    
-    
-    // 百度POI
-    
-    //
-    
+
     
 }
 
