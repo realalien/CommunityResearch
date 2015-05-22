@@ -72,6 +72,8 @@
                             <constraint firstItem="Hpm-4a-GDA" firstAttribute="top" secondItem="CbS-Ep-iv2" secondAttribute="bottom" id="ney-Gz-p7G"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="Hpm-4a-GDA" id="NHI-w8-Wz7"/>
                         <outlet property="searchDisplayController" destination="aLP-uH-fCQ" id="uEG-pT-diX"/>

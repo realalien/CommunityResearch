@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE1D91781B0C638B003C9F75 /* OC.mm in Sources */ = {isa = PBXBuildFile; fileRef = DE1D91771B0C638B003C9F75 /* OC.mm */; };
+		DEA186B01B0D8D8100EFA9F8 /* BaiduLbsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA186AF1B0D8D8100EFA9F8 /* BaiduLbsDataProvider.swift */; };
 		DEADBFD51B0ADF0800E5E23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEADBFD41B0ADF0800E5E23F /* AppDelegate.swift */; };
 		DEADBFD81B0ADF0800E5E23F /* CommunityResearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEADBFD61B0ADF0800E5E23F /* CommunityResearch.xcdatamodeld */; };
 		DEADBFDA1B0ADF0800E5E23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEADBFD91B0ADF0800E5E23F /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		DE1D91771B0C638B003C9F75 /* OC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OC.mm; sourceTree = "<group>"; };
+		DEA186AF1B0D8D8100EFA9F8 /* BaiduLbsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduLbsDataProvider.swift; sourceTree = "<group>"; };
 		DEADBFCF1B0ADF0800E5E23F /* CommunityResearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityResearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEADBFD31B0ADF0800E5E23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEADBFD41B0ADF0800E5E23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		DEADC0A21B0B04EB00E5E23F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DEA186AF1B0D8D8100EFA9F8 /* BaiduLbsDataProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA186B01B0D8D8100EFA9F8 /* BaiduLbsDataProvider.swift in Sources */,
 				DEADBFDA1B0ADF0800E5E23F /* ViewController.swift in Sources */,
 				DEADBFD81B0ADF0800E5E23F /* CommunityResearch.xcdatamodeld in Sources */,
 				DE1D91781B0C638B003C9F75 /* OC.mm in Sources */,

@@ -25,7 +25,8 @@ class ViewController: UIViewController, BMKMapViewDelegate, BMKLocationServiceDe
         
         lbs = BMKLocationService()
         lbs.delegate = self
-        lbs.startUserLocationService()
+        
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("retryUserLocation"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,8 +62,20 @@ class ViewController: UIViewController, BMKMapViewDelegate, BMKLocationServiceDe
     
     func didFailToLocateUserWithError(error: NSError!) {
         println("[Error] didFailToLocateUserWithError occured. \(error.localizedDescription)")
+        
+//        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("retryUserLocation"), userInfo: nil, repeats: true)
+    }
+    
+    func retryUserLocation(){
+        lbs.startUserLocationService()
     }
 
+    
+    
+    //获得poi结果数据
+    func unwindFromPoiSearch(segue:UIStoryboardSegue!){
+        
+    }
     
 }
 
