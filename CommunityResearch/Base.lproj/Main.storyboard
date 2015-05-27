@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KoW-9t-MGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KoW-9t-MGh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,6 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sJJ-Ka-CQw">
+                        <barButtonItem key="leftBarButtonItem" title="Test" id="YMr-FE-MBo">
+                            <connections>
+                                <action selector="testBtnClicked:" destination="vXZ-lx-hvc" id="CJ3-0u-U8w"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Dx2-aG-IU4">
                             <connections>
                                 <segue destination="gy3-FN-N68" kind="show" identifier="poiSearch" id="bdv-UK-Yq8"/>
@@ -77,9 +82,11 @@
                     <connections>
                         <outlet property="searchBar" destination="Hpm-4a-GDA" id="NHI-w8-Wz7"/>
                         <outlet property="searchDisplayController" destination="aLP-uH-fCQ" id="uEG-pT-diX"/>
+                        <segue destination="5RB-bm-PlH" kind="unwind" identifier="backToMap" unwindAction="unwindFromPoiSearch:" id="Hhp-Zw-Vqg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F05-HF-gwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5RB-bm-PlH" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="aLP-uH-fCQ">
                     <connections>
                         <outlet property="delegate" destination="gy3-FN-N68" id="hoD-Dq-NyA"/>

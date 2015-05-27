@@ -43,9 +43,17 @@ class PoiDemoViewController: UIViewController, UITableViewDelegate, UITableViewD
         datap.searchNearbyLocation(searchText, centerCoord: CLLocationCoordinate2DMake(31.224349, 121.476753) )  //  TODO: centerlocation
     }
     
+    
+    
     // BaiduLbsDataProviderDelegate
     func finishedResults(results:[BMKPoiInfo]){
-        NSLog("Done! num of results  \(count(results))")
+        NSLog("Done! num of results  \(results.count)")
+        
+        // return to map view for plotting
+        if results.count > 0 {
+            println("Button seen.  Trigging exit segue manually...")
+            self.performSegueWithIdentifier("backToMap", sender: self)
+        }
     }
     
 }

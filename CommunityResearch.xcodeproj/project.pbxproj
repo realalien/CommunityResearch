@@ -26,6 +26,7 @@
 		DEADC09F1B0AE5BF00E5E23F /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC09E1B0AE5BF00E5E23F /* BaiduMapAPI.framework */; };
 		DEADC0A11B0AE5ED00E5E23F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADC0A01B0AE5ED00E5E23F /* libstdc++.dylib */; };
 		DEADC0A51B0B124600E5E23F /* PoiDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEADC0A41B0B124600E5E23F /* PoiDemoViewController.swift */; };
+		DEF611131B145BBB007BD6F9 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DEF611121B145BBB007BD6F9 /* Notes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		DEADC09E1B0AE5BF00E5E23F /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
 		DEADC0A01B0AE5ED00E5E23F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		DEADC0A41B0B124600E5E23F /* PoiDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDemoViewController.swift; sourceTree = "<group>"; };
+		DEF611121B145BBB007BD6F9 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				DEADBFD11B0ADF0800E5E23F /* CommunityResearch */,
 				DEADBFEA1B0ADF0800E5E23F /* CommunityResearchTests */,
 				DEADBFD01B0ADF0800E5E23F /* Products */,
+				DEF611121B145BBB007BD6F9 /* Notes */,
 				DEADC09D1B0AE33B00E5E23F /* Resources */,
 				DEADC0801B0AE08100E5E23F /* Frameworks */,
 			);
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEADBFDD1B0ADF0800E5E23F /* Main.storyboard in Resources */,
+				DEF611131B145BBB007BD6F9 /* Notes in Resources */,
 				DEADC09C1B0AE32000E5E23F /* mapapi.bundle in Resources */,
 				DEADBFE21B0ADF0800E5E23F /* LaunchScreen.xib in Resources */,
 				DEADBFDF1B0ADF0800E5E23F /* Images.xcassets in Resources */,

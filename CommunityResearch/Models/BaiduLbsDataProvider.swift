@@ -35,20 +35,20 @@ class BaiduLbsDataProvider: NSObject, BMKPoiSearchDelegate {
     //    }
     
     var poiSearcher: BMKPoiSearch!
-    var poiResults: NSMutableArray!
+    var poiResults: [BMKPoiInfo]!
     var keyword: String!
     var centerLocation: CLLocationCoordinate2D!
     var delegate:BaiduLbsDataProviderDelegate?
     
     override init() {
         poiSearcher = BMKPoiSearch()
-        poiResults = NSMutableArray()
+        poiResults = []
         keyword = ""
         centerLocation = CLLocationCoordinate2DMake(31.241110, 121.516637)
     }
     
     func searchNearbyLocation(keyword:String, centerCoord: CLLocationCoordinate2D) {
-        poiResults.removeAllObjects()
+        poiResults!.removeAll(keepCapacity: false)
         poiSearcher.delegate = self
         
         self.centerLocation = CLLocationCoordinate2DMake(centerCoord.latitude, centerCoord.longitude)
@@ -79,8 +79,11 @@ class BaiduLbsDataProvider: NSObject, BMKPoiSearchDelegate {
     func onGetPoiResult(searcher: BMKPoiSearch!, result poiResult: BMKPoiResult!, errorCode: BMKSearchErrorCode) {
         if (errorCode.value == BMK_SEARCH_NO_ERROR.value) {
             //在此处理正常结果
-            poiResults.addObjectsFromArray(poiResult.poiInfoList as! [BMKPoiInfo])
-            
+
+            for poi in poiResult.poiInfoList {
+                poiResults.append(poi as! BMKPoiInfo)
+            }
+
             //for poi in poiResult.poiInfoList as! [BMKPoiInfo]{
             //    println("\(poi.name) (\(poi.pt.latitude), \(poi.pt.longitude))")
             //}
@@ -105,8 +108,7 @@ class BaiduLbsDataProvider: NSObject, BMKPoiSearchDelegate {
                     //                    self.addAnotation(marker)
                 }
                 
-                //self.getList()
-                self.delegate!.finishedResults([])
+                self.delegate!.finishedResults(self.poiResults)
                 
             } else {
                 println("抱歉，未找到结果")
@@ -115,9 +117,5 @@ class BaiduLbsDataProvider: NSObject, BMKPoiSearchDelegate {
             println("[Error] Error code : \(errorCode.value)  ");
         }
     }
-    
-    //    func getList() -> NSMutableArray {
-    //        return poiResults
-    //    }
     
 }
